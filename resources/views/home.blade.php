@@ -22,7 +22,7 @@
                     <tr>
                         <th scope="col" class="px-6 py-3">Name</th>
                         <th scope="col" class="px-6 py-3">Duration</th>
-                        <th scope="col" class="px-6 py-3">Crafting Tree</th>
+                        <th scope="col" class="px-6 py-3">Crafdting Tree</th>
                         <th scope="col" class="px-6 py-3">Component Buy Price</th>
                         <th scope="col" class="px-6 py-3">Item Sell Price</th>
                         <th scope="col" class="px-6 py-3">Margin</th>
