@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.negative {
+    color: rgb(239 68 68);
+}
+.positive {
+    color: rgb(34 197 94);
+}
+.UNCOMMON {
+    color: rgb(34 197 94);
+}
+.RARE {
+    color: #4b4bd7;
+}
+.EPIC {
+    color: #740c74;
+}
+.LEGENDARY {
+    color: #f6a401;
+}
