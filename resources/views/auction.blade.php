@@ -29,21 +29,18 @@
             <h1 class="text-neutral-900 font-semibold text-lg">Items with most bids</h1>
             <div class="grid grid-rows-4 grid-cols-4 justify-start items-center gap-4">
                 @foreach($auctionData as $auction)
-                    <div>
-                        <p class="{{$auction['tier']}}">{{$auction['item_name']}}</p>
-                    </div>
+                <div class="bg-white border shadow-md rounded-lg p-4">
+                    <h2 class="text-lg font-bold {{$auction['tier']}}">{{$auction['item_name']}}</h2>
+                    <p class="text-gray-500 time-remaining">Time remaining: <span id="time-remaining-{{$auction['uuid']}}"></span></p>
+                    <p class="text-gray-500">Highest Bid: {{number_format($auction['highest_bid_amount'],2,',','.')}}</p>
+                </div>
                 @endforeach
             </div>
         </div>
     </div>
     <script>
         const auctionData = @json($auctionData);
-
-        auctionData.forEach(auction => {
-            auction.end = new Date(auction.end).toLocaleString(); // Converts timestamp to local time string
-        });
-
-        console.log(auctionData);
     </script>
+    <script src="{{ asset('js/clock.js') }}"></script>
 </body>
 </html>

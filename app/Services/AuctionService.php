@@ -14,6 +14,11 @@ class AuctionService
         if ($response->successful()) {
             $auctions = $response->json()['auctions'];
 
+            $currentTime = time();
+            $auctions = array_filter($auctions, function ($auction) use ($currentTime) {
+                return $auction['end'] > $currentTime;
+            });
+
             usort($auctions, function ($a, $b) {
                 return count($b['bids']) - count($a['bids']);
             });
